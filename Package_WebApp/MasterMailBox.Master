@@ -1,0 +1,188 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Package_WebApp.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+  
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+  
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+<%--            border-top: 1px solid #000000;
+--%>            width: 179px;
+            width: 193px;
+        }
+        .style3
+        {
+            width: 13px;
+<%--            border-bottom: 1px solid #000000;
+            padding: 0px;
+--%>        }
+        .style4
+        {            width: 1331px;
+        }
+        .style5
+        {
+            text-align: right;
+        }
+        .style6
+        {
+            color: #003399;
+        }
+    </style>
+    </head>
+<body>
+    <form id="Form1" runat="server">
+    
+
+   
+
+
+
+    <div class="page">
+
+        <div class="header">
+            <div class="title">
+
+                <h1>
+                <asp:Image ID="Image1" runat="server" Height="51px" ImageUrl="~/images/itnworldwide.png" 
+                            Width="136px"/>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>
+                    <span class="style6">Mail Register</span>
+                </h1>
+
+
+
+
+
+               <%--<asp:Image ID="Image1" runat="server" ImageUrl="~/Iconos/logo_FrontLine1.jpg" 
+                    Height="50px" Width="228px" />--%>
+                &nbsp;&nbsp; <%--Package Register--%></div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+               
+           
+
+
+                <table class="style1">
+                    <tr>
+                        <td class="style3" valign="top">
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                        </td>
+                        <td class="style2" valign="top">
+                            <asp:TreeView ID="TreeView1" runat="server" Height="254px" ImageSet="Arrows" 
+                                LineImagesFolder="~/TreeLineImages" Width="158px" 
+                                style="color: #003300; text-align: left;" ForeColor="Black" 
+                                ShowLines="True">
+                                <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                                <Nodes>
+                                    <asp:TreeNode ImageUrl="~/Iconos/folder.png" Text=" Mail Box" Value="Mail Box" 
+                                        NavigateUrl="~/Default.aspx">
+                                        <asp:TreeNode ImageUrl="~/Iconos/Mail_1.png" 
+                                            NavigateUrl="~/PagesMembers/Page_MailBox/frm_ScaningNew.aspx" 
+                                            Text="Register Mail" Value="Main"></asp:TreeNode>
+                                        <asp:TreeNode ImageUrl="~/Iconos/Save-icon.png" 
+                                            NavigateUrl="~/PagesMembers/Page_MailBox/StoreRegister.aspx" 
+                                            Text="Archive data" Value="Archive data"></asp:TreeNode>
+                                    </asp:TreeNode>
+                                    <asp:TreeNode Text="Package Register " Value="AAAAA" 
+                                        ImageUrl="~/Iconos/folder.png" Expanded="False">
+                                        <asp:TreeNode NavigateUrl="~/PagesMembers/Pages_Package/PackageRegistro_EF.aspx" Text="Register" 
+                                            Value="Registro" ImageUrl="~/Iconos/forms1.png"></asp:TreeNode>
+                                        <asp:TreeNode ImageUrl="~/Iconos/Letter2.png" 
+                                            NavigateUrl="~/PagesMembers/Pages_Package/Busquedas.aspx" Text="Register List" 
+                                            Value="Registros Lista"></asp:TreeNode>
+                                        <asp:TreeNode Text="Add Manifest" Value="Busquedas" 
+                                            NavigateUrl="~/PagesMembers/Pages_Package/Cuba_PackageBusquedas.aspx" 
+                                            ImageUrl="~/Iconos/search.png"></asp:TreeNode>
+                                    </asp:TreeNode>
+                                    <asp:TreeNode Text="Maintenance" Value="BBBBB" ImageUrl="~/Iconos/folder.png" 
+                                        Expanded="False">
+                                        <asp:TreeNode Text="Rate" Value="B1111" 
+                                            NavigateUrl="~/PagesMembers/Pages_Package/Cuba_PackageTarifas.aspx" 
+                                            ImageUrl="~/Iconos/bill.png"></asp:TreeNode>
+                                        <asp:TreeNode Text="Customers" Value="B22222" 
+                                            NavigateUrl="~/PagesMembers/Pages_Package/Coba_PackagesClientes.aspx" 
+                                            ImageUrl="~/Iconos/Gente1.png"></asp:TreeNode>
+                                    </asp:TreeNode>
+                                    <asp:TreeNode Text="Manifiestos" Value="Manifiestos" 
+                                        ImageUrl="~/Iconos/folder.png" Expanded="False">
+                                        <asp:TreeNode NavigateUrl="~/PagesMembers/Pages_Package/Cuba_PackageManifiesto.aspx" 
+                                            Text="Crear Manifiesto" Value="Crear Manifiesto" 
+                                            ImageUrl="~/Iconos/New1.png"></asp:TreeNode>
+                                        <asp:TreeNode NavigateUrl="~/PagesMembers/Pages_Package/LUIS_Inventary.aspx" 
+                                            Text="Up_Manifest" Value="Subir_Manifiesto" 
+                                            ImageUrl="~/Iconos/Upload1.png"></asp:TreeNode>
+                                        <asp:TreeNode NavigateUrl="~/PagesMembers/Pages_Package/LUIS_Inventario.aspx" 
+                                            Text="Inv.-Desp." Value="Inventario-Despacho" 
+                                            ImageUrl="~/Iconos/Store.png"></asp:TreeNode>
+                                        <asp:TreeNode ImageUrl="~/Iconos/Letter2.png" Text="RepManif/Desp" 
+                                            Value="Report Manif / Desp" 
+                                            NavigateUrl="~/PagesMembers/Pages_Package/Cuba_Repo_Manif_Desp.aspx"></asp:TreeNode>
+                                    </asp:TreeNode>
+                                    <asp:TreeNode ImageUrl="~/Iconos/folder.png" Text="Transf. Fiile" 
+                                        Value="Transferencias Ficheros" Expanded="False">
+                                        <asp:TreeNode ImageUrl="~/Iconos/DataBase.png" 
+                                            NavigateUrl="~/PagesMembers/Pages_Package/Cuba_Busca_Export.aspx" Text="File/Retro" 
+                                            Value="Fichero CUBAPACK"></asp:TreeNode>
+                                        <asp:TreeNode ImageUrl="~/Iconos/DataBase.png" 
+                                            NavigateUrl="~/PagesMembers/Pages_Package/Cuba_Export_Import_Agen.aspx" 
+                                            Text="Expot/Import" Value="Expot / Import Agencias">
+                                        </asp:TreeNode>
+                                    </asp:TreeNode>
+                                    <asp:TreeNode Text="Prepare shipping" Value="Preparacion Envio" 
+                                        ImageUrl="~/Iconos/plane-icon1.png"></asp:TreeNode>
+                                    <asp:TreeNode Text="Administracion" Value="CCCCCC"></asp:TreeNode>
+                                    <asp:TreeNode Text="Informes" Value="DDDDD"></asp:TreeNode>
+                                </Nodes>
+                                <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" 
+                                    HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                                <ParentNodeStyle Font-Bold="False" />
+                                <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" 
+                                    HorizontalPadding="0px" VerticalPadding="0px" />
+                            </asp:TreeView>
+                                      <asp:ScriptManager ID="ScriptManager1" runat="server"/>
+                        </td>
+                        <td style="border: 1px solid #000000; text-align: left;" valign="top" 
+                            class="style4">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+
+                            <div id="copyright" class="container">
+	                             <p class="style5">&copy; Design by R.Valdivia&nbsp;&nbsp;
+                                      </p>
+                            </div>
+
+                        </td>
+                    </tr>
+                    </table>
+             </asp:ContentPlaceHolder>
+        </div>
+    </div>
+
+    </form>
+</body>
+</html>

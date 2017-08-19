@@ -1,0 +1,7 @@
+C:\Users\Roberto.RValdivia\Desktop\ScanCourier\Mail_Box\Package_WebApp\obj\Debug\ScanCourier_Web.csprojResolveAssemblyReference.cache
+C:\Users\Roberto.RValdivia\Desktop\ScanCourier\Mail_Box\Package_WebApp\obj\Debug\Package_WebApp.Properties.Resources.resources
+C:\Users\Roberto.RValdivia\Desktop\ScanCourier\Mail_Box\Package_WebApp\obj\Debug\ScanCourier_Web.csproj.GenerateResource.Cache
+C:\Users\Roberto.RValdivia\Desktop\ScanCourier\Mail_Box\Package_WebApp\obj\Debug\RdlCompile.cache
+C:\Users\Roberto.RValdivia\Desktop\ScanCourier\Mail_Box\Package_WebApp\obj\Debug\RdlCompile.compiled
+C:\Users\Roberto.RValdivia\Desktop\ScanCourier\Mail_Box\Package_WebApp\obj\Debug\Package_WebApp.dll
+C:\Users\Roberto.RValdivia\Desktop\ScanCourier\Mail_Box\Package_WebApp\obj\Debug\Package_WebApp.pdb
